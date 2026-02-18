@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+:root {
+    --bg1: #fbc2eb;
+    --bg2: #a6c1ee;
+    --btn1: #ff9a9e;
+    --btn2: #fad0c4;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Quicksand',sans-serif;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    background:linear-gradient(135deg,var(--bg1),var(--bg2));
+    overflow-x:hidden;
+}
+
+/* Header */
+header{
+    text-align:center;
+    padding:2rem;
+    color:white;
+}
+
+.logo{
+    font-size:2.3rem;
+    text-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Center */
+.center{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Glass Card */
+.glass-card{
+    background:rgba(255,255,255,0.25);
+    backdrop-filter:blur(15px);
+    padding:3rem;
+    border-radius:25px;
+    text-align:center;
+    width:320px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    animation:float 3s ease-in-out infinite;
+}
+
+/* Profile Image */
+.profile-img{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    margin-bottom:1rem;
+    border:4px solid white;
+}
+
+/* Button */
+.sweet-btn{
+    display:inline-block;
+    margin-top:1.5rem;
+    padding:0.8rem 2rem;
+    border-radius:50px;
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    background:linear-gradient(to right,var(--btn1),var(--btn2));
+    box-shadow:0 5px 15px rgba(255,105,180,0.4);
+    transition:0.3s;
+}
+
+.sweet-btn:hover{
+    transform:scale(1.1);
+    box-shadow:0 8px 20px rgba(255,105,180,0.6);
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:1rem;
+    color:white;
+}
+
+/* Floating card */
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+    100%{transform:translateY(0);}
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .glass-card{
+        width:90%;
+    }
+}
